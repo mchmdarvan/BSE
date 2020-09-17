@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+//Lazu memec
 public class MainActivity extends AppCompatActivity {
 
     @Override
