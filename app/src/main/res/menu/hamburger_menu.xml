@@ -3,19 +3,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_beranda"
-            android:title="Beranda" />
-        <item
-            android:id="@+id/nav_bukudigital"
-            android:title="Buku Digital" />
-        <item
-            android:id="@+id/nav_jenjang"
-            android:title="Jenjang" />
-        <item
-            android:id="@+id/nav_kesetaraan"
-            android:title="Kesetaraan" />
-    </group>
+    <item android:title="Beranda"></item>
+    <item android:title="Buku Digital">
+        <menu>
+            <item
+                android:id="@+id/subitem_buku_terbaru"
+                android:title="Terbaru" />
+            <item
+                android:id="@+id/subitem_buku_terpopuler"
+                android:title="Terpopuler" />
+            <item
+                android:id="@+id/subitem_buku_nonkurikulum"
+                android:title="Non-Kurikulum" />
+        </menu>
+    </item>
+    <item android:title="Jenjang">
+        <menu>
+            <item
+                android:id="@+id/subitem_paud"
+                android:title="PAUD" />
+            <item
+                android:id="@+id/subitem_buku_sd"
+                android:title="SD" />
+            <item
+                android:id="@+id/subitem_buku_SMP"
+                android:title="SMP" />
+            <item
+                android:id="@+id/subitem_buku_SMA"
+                android:title="SMA" />
+            <item
+                android:id="@+id/subitem_buku_SMK"
+                android:title="SMK" />
+        </menu>
+    </item>
+    <item android:title="Kesetaraan">
+        <menu>
+            <item
+                android:id="@+id/subitem_paket_a"
+                android:title="Paket A" />
+            <item
+                android:id="@+id/subitem_buku_paket_b"
+                android:title="Paket B" />
+            <item
+                android:id="@+id/subitem_buku_paket_c"
+                android:title="Paket C" />
+        </menu>
+    </item>
 
 </menu>
