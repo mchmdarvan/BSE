@@ -64,9 +64,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 fragment = new ProfileFragment();
                 break;
         }
-
         return loadFragment(fragment);
-
     }
 
     @Override
