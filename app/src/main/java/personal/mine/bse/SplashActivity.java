@@ -1,17 +1,15 @@
 package personal.mine.bse;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-public class SplashActivity2 extends Activity {
+public class SplashActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash2);
+        setContentView(R.layout.activity_splash);
         Thread thread = new Thread() {
             public void run () {
                 try {
@@ -20,7 +18,7 @@ public class SplashActivity2 extends Activity {
                     e.printStackTrace();
 
                 } finally {
-                    startActivity(new Intent(SplashActivity2.this , MainActivity.class));
+                    startActivity(new Intent(SplashActivity.this , MainActivity.class));
                     finish();
                 }
             }

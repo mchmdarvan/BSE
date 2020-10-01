@@ -6,6 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/logo_upn"
-    tools:context=".SplashActivity2">
+    tools:context=".SplashActivity">
 
 </LinearLayout>
