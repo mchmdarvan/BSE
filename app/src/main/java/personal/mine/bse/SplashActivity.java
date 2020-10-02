@@ -3,6 +3,9 @@ package personal.mine.bse;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+
+import personal.mine.bse.onBoarding.IntroActivity;
 
 public class SplashActivity extends Activity {
 
@@ -10,19 +13,13 @@ public class SplashActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        Thread thread = new Thread() {
-            public void run () {
-                try {
-                    sleep(4000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-
-                } finally {
-                    startActivity(new Intent(SplashActivity.this , MainActivity.class));
-                    finish();
-                }
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent i = new Intent(SplashActivity.this, IntroActivity.class);
+                startActivity(i);
+                finish();
             }
-        };
-        thread.start();
+        }, 5000);
     }
 }
