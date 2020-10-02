@@ -11,6 +11,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -38,9 +39,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout = findViewById(R.id.hamburger_menu);
 
         loadFragment(new HomeFragment());
-
         BottomNavigationView navigation = findViewById(R.id.bottomNavigationView);
         navigation.setOnNavigationItemSelectedListener(this);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_open);
         drawerLayout.addDrawerListener(toggle);
@@ -54,17 +57,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (menuItem.getItemId()) {
             case R.id.homeFragment:
                 fragment = new HomeFragment();
+                loadFragment(fragment);
                 break;
 
             case R.id.faqFragment:
                 fragment = new FaqFragment();
+                loadFragment(fragment);
                 break;
 
             case R.id.profileFragment:
                 fragment = new ProfileFragment();
+                loadFragment(fragment);
+                break;
+            case R.id.subitem_buku_terbaru:
+                Intent bukuTerbaru = new Intent(MainActivity.this, BukuBaruActivity.class);
+                startActivity(bukuTerbaru);
                 break;
         }
-        return loadFragment(fragment);
+        return true;
     }
 
     @Override
