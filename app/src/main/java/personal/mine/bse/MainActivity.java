@@ -15,8 +15,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import personal.mine.bse.dashboard.FaqFragment;
 import personal.mine.bse.dashboard.HomeFragment;
@@ -34,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         toolbar = findViewById(R.id.toolbar);
+
         setSupportActionBar(toolbar);
 
         drawerLayout = findViewById(R.id.hamburger_menu);
@@ -43,6 +50,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigation.setOnNavigationItemSelectedListener(this);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_open);
