@@ -7,13 +7,16 @@
     android:layout_height="match_parent"
     android:background="@android:color/background_light">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Beranda"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:iss_auto_cycle="true"
+        app:iss_corner_radius="20"
+        app:iss_delay="0"
+        app:iss_error_image="@drawable/bg_grey"
+        app:iss_period="1000"
+        app:iss_placeholder="@drawable/bg_grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
