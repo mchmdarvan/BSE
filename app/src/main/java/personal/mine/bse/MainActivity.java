@@ -7,26 +7,28 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.NavigationUI;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.denzcoskun.imageslider.ImageSlider;
-import com.denzcoskun.imageslider.constants.ScaleTypes;
-import com.denzcoskun.imageslider.models.SlideModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import personal.mine.bse.dashboard.FaqFragment;
 import personal.mine.bse.dashboard.HomeFragment;
 import personal.mine.bse.dashboard.ProfileFragment;
+import personal.mine.bse.modul.BukuBaruActivity;
+import personal.mine.bse.modul.BukuNonkurikulumActivity;
+import personal.mine.bse.modul.BukuPopulerActivity;
+import personal.mine.bse.modul.PaketAActivity;
+import personal.mine.bse.modul.PaketBActivity;
+import personal.mine.bse.modul.PaketCActivity;
+import personal.mine.bse.modul.PaudActivity;
+import personal.mine.bse.modul.SmaActivity;
+import personal.mine.bse.modul.SmkActivity;
+import personal.mine.bse.modul.SmpActivity;
+import personal.mine.bse.modul.SdActivity;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, BottomNavigationView.OnNavigationItemSelectedListener {
@@ -50,9 +52,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigation.setOnNavigationItemSelectedListener(this);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-
-
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_open);
@@ -79,10 +78,50 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 fragment = new ProfileFragment();
                 loadFragment(fragment);
                 break;
+
             case R.id.subitem_buku_terbaru:
                 Intent bukuTerbaru = new Intent(MainActivity.this, BukuBaruActivity.class);
                 startActivity(bukuTerbaru);
                 break;
+            case R.id.subitem_buku_terpopuler:
+                Intent bukuTerpopuler = new Intent(MainActivity.this, BukuPopulerActivity.class);
+                startActivity(bukuTerpopuler);
+                break;
+            case R.id.subitem_buku_nonkurikulum:
+                Intent bukuNonKurikulum = new Intent(MainActivity.this, BukuNonkurikulumActivity.class);
+                startActivity(bukuNonKurikulum);
+                break;
+
+            case R.id.subitem_paud:
+                Intent bukuPaud = new Intent(MainActivity.this, PaudActivity.class);
+                startActivity(bukuPaud);
+                break;
+            case R.id.subitem_buku_sd:
+                Intent bukuSD = new Intent(MainActivity.this, SdActivity.class);
+                startActivity(bukuSD);
+                break;
+            case R.id.subitem_buku_SMP:
+                Intent bukuSMP = new Intent(MainActivity.this, SmpActivity.class);
+                startActivity(bukuSMP);
+                break;
+            case R.id.subitem_buku_SMA:
+                Intent bukuSMA = new Intent(MainActivity.this, SmaActivity.class);
+                startActivity(bukuSMA);
+                break;
+            case R.id.subitem_buku_SMK:
+                Intent bukuSMk = new Intent(MainActivity.this, SmkActivity.class);
+                startActivity(bukuSMk);
+
+            case R.id.subitem_buku_paket_a:
+                Intent paketA = new Intent(MainActivity.this, PaketAActivity.class);
+                startActivity(paketA);
+            case R.id.subitem_buku_paket_b:
+                Intent paketB = new Intent(MainActivity.this, PaketBActivity.class);
+                startActivity(paketB);
+            case R.id.subitem_buku_paket_c:
+                Intent paketC = new Intent(MainActivity.this, PaketCActivity.class);
+                startActivity(paketC);
+
         }
         return true;
     }

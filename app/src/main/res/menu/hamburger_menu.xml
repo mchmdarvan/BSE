@@ -39,7 +39,7 @@
     <item android:title="Kesetaraan">
         <menu>
             <item
-                android:id="@+id/subitem_paket_a"
+                android:id="@+id/subitem_buku_paket_a"
                 android:title="Paket A" />
             <item
                 android:id="@+id/subitem_buku_paket_b"
