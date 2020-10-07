@@ -20,7 +20,6 @@
         <activity android:name=".modul.SmpActivity" />
         <activity android:name=".modul.SdActivity" />
         <activity android:name=".modul.PaudActivity" />
-        <activity android:name=".modul.BukuNonkurikulumActivity" />
         <activity android:name=".modul.BukuPopulerActivity" />
         <activity android:name=".modul.BukuBaruActivity" />
         <activity
