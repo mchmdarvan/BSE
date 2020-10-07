@@ -5,6 +5,7 @@
     android:id="@+id/fragmentHome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     android:background="@android:color/background_light">
 
     <com.denzcoskun.imageslider.ImageSlider
@@ -25,8 +26,7 @@
         android:id="@+id/imageView"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="32dp"
         android:src="@drawable/paud"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/slider" />
@@ -36,7 +36,7 @@
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="32dp"
         android:src="@drawable/sd"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/slider" />
@@ -46,7 +46,7 @@
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="32dp"
         android:src="@drawable/smp"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/slider" />
@@ -55,18 +55,15 @@
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="32dp"
         android:src="@drawable/sma"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/slider" />
 
     <ImageView
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="32dp"
         android:src="@drawable/smk"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
