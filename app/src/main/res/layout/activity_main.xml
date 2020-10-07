@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/hamburger_menu"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity"
+    tools:context="personal.mine.bse.MainActivity"
     tools:openDrawer="start">
 
     <LinearLayout

@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="personal.mine.bse.modul.PaketAActivity">
+    tools:context="personal.mine.bse.modul.BukuNonkurikulumActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
