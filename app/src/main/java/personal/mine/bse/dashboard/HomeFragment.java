@@ -33,9 +33,9 @@ public class HomeFragment extends Fragment {
 
         ImageSlider imageSlider=view.findViewById(R.id.slider);
         List<SlideModel> slideModelLs=new ArrayList<>();
-        slideModelLs.add(new SlideModel(R.drawable.logo_rumah_belajar,"", ScaleTypes.FIT));
-        slideModelLs.add(new SlideModel(R.drawable.logo_rumah_belajar,"", ScaleTypes.FIT));
-        slideModelLs.add(new SlideModel(R.drawable.logo_rumah_belajar,"", ScaleTypes.FIT));
+        slideModelLs.add(new SlideModel(R.drawable.banner, ScaleTypes.CENTER_INSIDE));
+        slideModelLs.add(new SlideModel(R.drawable.banner, ScaleTypes.CENTER_INSIDE));
+        slideModelLs.add(new SlideModel(R.drawable.banner, ScaleTypes.CENTER_INSIDE));
 
         imageSlider.setImageList(slideModelLs, ScaleTypes.FIT);
     }

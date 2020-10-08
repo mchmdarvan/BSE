@@ -5,8 +5,7 @@
     android:id="@+id/fragmentHome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@android:color/background_light">
+    android:padding="16dp">
 
     <com.denzcoskun.imageslider.ImageSlider
         android:id="@+id/slider"
@@ -22,49 +21,72 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+    <TextView
+        android:id="@+id/tvPAUD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:text="PAUD"
+        android:drawableTop="@drawable/paud"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
         android:src="@drawable/paud"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/slider" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+    <TextView
+        android:id="@+id/tvSD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
-        android:src="@drawable/sd"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:text="@string/tvSd"
+        android:drawableTop="@drawable/sd"
+        app:layout_constraintStart_toEndOf="@+id/tvPAUD"
         app:layout_constraintTop_toBottomOf="@+id/slider" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+    <TextView
+        android:id="@+id/tvSMP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
-        android:src="@drawable/smp"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:drawableTop="@drawable/smp"
+        android:text="@string/tvSMP"
+        app:layout_constraintStart_toEndOf="@+id/tvSD"
         app:layout_constraintTop_toBottomOf="@+id/slider" />
 
-    <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+    <TextView
+        android:id="@+id/tvSMA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
-        android:src="@drawable/sma"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        android:text="@string/tvSma"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:drawableTop="@drawable/sma"
+        app:layout_constraintStart_toEndOf="@+id/tvSMP"
         app:layout_constraintTop_toBottomOf="@+id/slider" />
 
-    <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+    <TextView
+        android:id="@+id/tvSMK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:src="@drawable/smk"
+        android:text="@string/tvSMK"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:drawableTop="@drawable/smk"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPAUD" />
 </androidx.constraintlayout.widget.ConstraintLayout>
