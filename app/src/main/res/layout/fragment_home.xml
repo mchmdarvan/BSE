@@ -5,12 +5,14 @@
     android:id="@+id/fragmentHome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:background="@color/colorWhite"
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp">
 
     <com.denzcoskun.imageslider.ImageSlider
         android:id="@+id/slider"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="175dp"
         app:iss_auto_cycle="true"
         app:iss_corner_radius="20"
         app:iss_delay="0"
@@ -21,76 +23,73 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvPAUD"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="32dp"
-        android:drawableTop="@drawable/paud"
-        android:gravity="center"
-        android:src="@drawable/paud"
-        android:text="PAUD"
-        android:textColor="@color/colorBlack"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/slider" />
 
-    <TextView
-        android:id="@+id/tvSD"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearItem"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="32dp"
-        android:drawableTop="@drawable/sd"
-        android:gravity="center"
-        android:text="@string/tvSd"
-        android:textColor="@color/colorBlack"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/tvPAUD"
-        app:layout_constraintTop_toBottomOf="@+id/slider" />
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/slider">
 
-    <TextView
-        android:id="@+id/tvSMP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="32dp"
-        android:drawableTop="@drawable/smp"
-        android:gravity="center"
-        android:text="@string/tvSMP"
-        android:textColor="@color/colorBlack"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/tvSD"
-        app:layout_constraintTop_toBottomOf="@+id/slider" />
+        <TextView
+            android:id="@+id/tvPAUD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/paud"
+            android:gravity="center"
+            android:src="@drawable/paud"
+            android:text="PAUD"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
 
-    <TextView
-        android:id="@+id/tvSMA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="51dp"
-        android:drawableTop="@drawable/sma"
-        android:gravity="center"
-        android:text="@string/tvSma"
-        android:textColor="@color/colorBlack"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvSMP"
-        app:layout_constraintTop_toBottomOf="@+id/slider" />
+        <TextView
+            android:id="@+id/tvSD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/sd"
+            android:gravity="center"
+            android:text="@string/tvSd"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tvSMP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/smp"
+            android:gravity="center"
+            android:text="@string/tvSMP"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tvSMA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/sma"
+            android:gravity="center"
+            android:text="@string/tvSma"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/tvSMK"
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:drawableTop="@drawable/smk"
         android:gravity="center"
         android:text="@string/tvSMK"
         android:textColor="@color/colorBlack"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPAUD" />
+        app:layout_constraintTop_toBottomOf="@+id/linearItem" />
 </androidx.constraintlayout.widget.ConstraintLayout>
