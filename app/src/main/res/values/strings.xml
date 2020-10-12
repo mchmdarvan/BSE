@@ -8,4 +8,10 @@
     <string name="tvSMP">SMP</string>
     <string name="tvSma">SMA</string>
     <string name="tvSMK">SMK</string>
+    <string name="facebook_app_id">332622044657905</string>
+    <string name="fb_login_protocol_scheme">fb332622044657905</string>
+    <string name="txtName">Nama</string>
+    <string name="txtEmail">Email</string>
+    <string name="sign_out">Sign Out</string>
+
 </resources>
