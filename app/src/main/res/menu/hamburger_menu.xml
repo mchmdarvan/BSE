@@ -3,50 +3,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <item android:title="Beranda"></item>
-    <item android:title="Buku Digital">
+    <item android:title="@string/beranda"/>
+    <item android:title="@string/buku_digital">
         <menu>
             <item
                 android:id="@+id/subitem_buku_terbaru"
-                android:title="Terbaru" />
+                android:title="@string/terbaru" />
             <item
                 android:id="@+id/subitem_buku_terpopuler"
-                android:title="Terpopuler" />
+                android:title="@string/terpopuler" />
             <item
                 android:id="@+id/subitem_buku_nonkurikulum"
-                android:title="Non-Kurikulum" />
+                android:title="@string/non_kurikulum" />
         </menu>
     </item>
-    <item android:title="Jenjang">
+    <item android:title="@string/jenjang">
         <menu>
             <item
                 android:id="@+id/subitem_paud"
-                android:title="PAUD" />
+                android:title="@string/tvPaud" />
             <item
                 android:id="@+id/subitem_buku_sd"
-                android:title="SD" />
+                android:title="@string/tvSd" />
             <item
                 android:id="@+id/subitem_buku_SMP"
-                android:title="SMP" />
+                android:title="@string/tvSMP" />
             <item
                 android:id="@+id/subitem_buku_SMA"
-                android:title="SMA" />
+                android:title="@string/tvSma" />
             <item
                 android:id="@+id/subitem_buku_SMK"
-                android:title="SMK" />
+                android:title="@string/tvSMK" />
         </menu>
     </item>
-    <item android:title="Kesetaraan">
+    <item android:title="@string/kesetaraan">
         <menu>
             <item
                 android:id="@+id/subitem_buku_paket_a"
-                android:title="Paket A" />
+                android:title="@string/paket_a" />
             <item
                 android:id="@+id/subitem_buku_paket_b"
-                android:title="Paket B" />
+                android:title="@string/paket_b" />
             <item
                 android:id="@+id/subitem_buku_paket_c"
-                android:title="Paket C" />
+                android:title="@string/paket_c" />
         </menu>
     </item>
 

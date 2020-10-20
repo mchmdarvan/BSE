@@ -157,17 +157,25 @@ public class ProfileFragment extends Fragment {
 
     private void checkLoginStatus(){
         if (AccessToken.getCurrentAccessToken() != null){
-            txtName.setVisibility(View.VISIBLE);
-            txtEmail.setVisibility(View.VISIBLE);
-            imgProfile.setVisibility(View.VISIBLE);
-            loginButton.setVisibility(View.INVISIBLE);
-            btnSignout.setVisibility(View.VISIBLE);
+            onLogin();
             loadUserProfile(AccessToken.getCurrentAccessToken());
         } else if(AccessToken.getCurrentAccessToken() == null){
-            ivLogo.setVisibility(View.VISIBLE);
-            txtEmail.setVisibility(View.INVISIBLE);
-            txtName.setVisibility(View.INVISIBLE);
-            imgProfile.setVisibility(View.INVISIBLE);
+            onNotLogin();
         }
+    }
+
+    private void onLogin(){
+        txtName.setVisibility(View.VISIBLE);
+        txtEmail.setVisibility(View.VISIBLE);
+        imgProfile.setVisibility(View.VISIBLE);
+        loginButton.setVisibility(View.INVISIBLE);
+        btnSignout.setVisibility(View.VISIBLE);
+    }
+
+    private void onNotLogin(){
+        ivLogo.setVisibility(View.VISIBLE);
+        txtEmail.setVisibility(View.INVISIBLE);
+        txtName.setVisibility(View.INVISIBLE);
+        imgProfile.setVisibility(View.INVISIBLE);
     }
 }
