@@ -1,5 +1,6 @@
-package personal.mine.bse.dashboard;
+ package personal.mine.bse.dashboard;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -23,6 +24,8 @@ import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
+import com.facebook.HttpMethod;
+import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
@@ -131,7 +134,7 @@ public class ProfileFragment extends Fragment {
                     String email = object.getString("email");
                     String id = object.getString("id");
 
-                    String imgUrl = "https://graph.facebook.com/"+id+"/picture?type=normal";
+                    String pic = object.getJSONObject("picture").getJSONObject("data").getString("url");
 
                     txtEmail.setText(email);
                     txtName.setText(first_name + last_name);
@@ -140,7 +143,7 @@ public class ProfileFragment extends Fragment {
                     requestOptions.dontAnimate();
 
                     Glide.with(getActivity())
-                            .load(imgUrl)
+                            .load(pic)
                             .into(imgProfile);
 
                 } catch (JSONException e) {
@@ -150,24 +153,32 @@ public class ProfileFragment extends Fragment {
         });
 
         Bundle parameters = new Bundle();
-        parameters.putString("fields", "first_name,last_name,email,id");
+        parameters.putString("fields", "first_name,last_name,email,id, picture");
         graphRequest.setParameters(parameters);
         graphRequest.executeAsync();
     }
 
     private void checkLoginStatus(){
         if (AccessToken.getCurrentAccessToken() != null){
-            txtName.setVisibility(View.VISIBLE);
-            txtEmail.setVisibility(View.VISIBLE);
-            imgProfile.setVisibility(View.VISIBLE);
-            loginButton.setVisibility(View.INVISIBLE);
-            btnSignout.setVisibility(View.VISIBLE);
+            onLogin();
             loadUserProfile(AccessToken.getCurrentAccessToken());
         } else if(AccessToken.getCurrentAccessToken() == null){
-            ivLogo.setVisibility(View.VISIBLE);
-            txtEmail.setVisibility(View.INVISIBLE);
-            txtName.setVisibility(View.INVISIBLE);
-            imgProfile.setVisibility(View.INVISIBLE);
+            onNotLogin();
         }
+    }
+
+    private void onLogin(){
+        txtName.setVisibility(View.VISIBLE);
+        txtEmail.setVisibility(View.VISIBLE);
+        imgProfile.setVisibility(View.VISIBLE);
+        loginButton.setVisibility(View.INVISIBLE);
+        btnSignout.setVisibility(View.VISIBLE);
+    }
+
+    private void onNotLogin(){
+        ivLogo.setVisibility(View.VISIBLE);
+        txtEmail.setVisibility(View.INVISIBLE);
+        txtName.setVisibility(View.INVISIBLE);
+        imgProfile.setVisibility(View.INVISIBLE);
     }
 }

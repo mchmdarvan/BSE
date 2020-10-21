@@ -13,5 +13,23 @@
     <string name="txtName">Nama</string>
     <string name="txtEmail">Email</string>
     <string name="sign_out">Sign Out</string>
+    <string name="beranda">Beranda</string>
+    <string name="buku_digital">Buku Digital</string>
+    <string name="terbaru">Terbaru</string>
+    <string name="terpopuler">Terpopuler</string>
+    <string name="non_kurikulum">Non-Kurikulum</string>
+    <string name="jenjang">Jenjang</string>
+    <string name="tvPaud">PAUD</string>
+    <string name="kesetaraan">Kesetaraan</string>
+    <string name="paket_a">Paket A</string>
+    <string name="paket_b">Paket B</string>
+    <string name="paket_c">Paket C</string>
+    <string name="buku_terbaru">Buku Terbaru</string>
+    <string name="lihat_semua">Lihat Semua</string>
+    <string name="buku_terpopuler">Buku Terpopuler</string>
+    <string name="buku_non_kurikulum">Buku Non Kurikulum</string>
+    <string name="tvJudul">Judul</string>
+    <string name="tvDeskripsi">Deskripsi</string>
+    <string name="penulis">Penulis</string>
 
 </resources>
