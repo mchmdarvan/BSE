@@ -1,4 +1,4 @@
-package personal.mine.bse.dashboard;
+ package personal.mine.bse.dashboard;
 
 import android.database.DataSetObserver;
 import android.os.Bundle;
