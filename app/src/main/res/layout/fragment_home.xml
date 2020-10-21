@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/scrollView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/fragmentHome"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content"
         android:background="@color/colorWhite"
         android:paddingStart="8dp"
         android:paddingEnd="8dp">
@@ -49,7 +45,6 @@
                 android:src="@drawable/paud"
                 android:text="@string/tvPaud"
                 android:textColor="@color/colorBlack"
-                android:textStyle="bold"
                 app:drawableTopCompat="@drawable/paud" />
 
             <TextView
@@ -60,7 +55,6 @@
                 android:gravity="center"
                 android:text="@string/tvSd"
                 android:textColor="@color/colorBlack"
-                android:textStyle="bold"
                 app:drawableTopCompat="@drawable/sd" />
 
             <TextView
@@ -71,7 +65,6 @@
                 android:gravity="center"
                 android:text="@string/tvSMP"
                 android:textColor="@color/colorBlack"
-                android:textStyle="bold"
                 app:drawableTopCompat="@drawable/smp" />
 
             <TextView
@@ -82,7 +75,6 @@
                 android:gravity="center"
                 android:text="@string/tvSma"
                 android:textColor="@color/colorBlack"
-                android:textStyle="bold"
                 app:drawableTopCompat="@drawable/sma" />
 
         </LinearLayout>
@@ -96,7 +88,6 @@
             android:gravity="center"
             android:text="@string/tvSMK"
             android:textColor="@color/colorBlack"
-            android:textStyle="bold"
             app:drawableTopCompat="@drawable/smk"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearItem" />
@@ -132,6 +123,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvBukuTerbaru"
+                tools:listitem="@layout/item_list_buku_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </androidx.cardview.widget.CardView>
@@ -167,6 +159,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvBukuTerpopuler"
+                tools:listitem="@layout/item_list_buku_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </androidx.cardview.widget.CardView>
@@ -202,10 +195,11 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvBukuNonkurikulum"
+                tools:listitem="@layout/item_list_buku_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</ScrollView>
+</androidx.core.widget.NestedScrollView>
