@@ -47,28 +47,41 @@ public class FaqFragment extends Fragment {
         listDataFaq = new ArrayList<>();
         listHashMap = new HashMap<>();
 
-        listDataFaq.add("Pertanyaan 1");
-        listDataFaq.add("Pertanyaan 2");
-        listDataFaq.add("Pertanyaan 3");
-        listDataFaq.add("Pertanyaan 4");
-
-        List<String> pertanyaanSatu = new ArrayList<>();
-        pertanyaanSatu.add("Jawaban 1");
-
-        List<String> pertanyaanDua = new ArrayList<>();
-        pertanyaanDua.add("Jawaban 2");
-
-        List<String> pertanyaanTiga = new ArrayList<>();
-        pertanyaanTiga.add("Jawaban 3");
-
-        List<String> pertanyaanEmpat = new ArrayList<>();
-        pertanyaanEmpat.add("Jawaban 4");
+        listDataFaq.add("1. Bagaimana mencari konten pembelajaran yang diperlukan?");
+        listDataFaq.add("2. Bagaimana mengunduh konten Buku Sekolah Elektronik?");
+        listDataFaq.add("3. Bagaimana mencari lokasi file yang sudah diunduh?");
+        listDataFaq.add("4. Bagaimana ekstensi hasil unduhan konten Buku Sekolah Elektronik?");
+        listDataFaq.add("5. Bagaimana menjalankan konten sumber belajar yang sudah diunduh");
+        listDataFaq.add("6. Bagaimana cara melakukan LOGIN?");
+        listDataFaq.add("7. Bagaimana cara mengubah profil?");
 
 
-        listHashMap.put(listDataFaq.get(0), pertanyaanSatu);
-        listHashMap.put(listDataFaq.get(1), pertanyaanDua);
-        listHashMap.put(listDataFaq.get(2), pertanyaanTiga);
-        listHashMap.put(listDataFaq.get(3), pertanyaanEmpat);
+        List<String> pertanyaan1 = new ArrayList<>();
+        pertanyaan1.add("Pengguna bisa mencari buku yang ingin dibaca dengan memilih jenjang pendidikan yang tersedia di Beranda");
+        List<String> pertanyaan2 = new ArrayList<>();
+        pertanyaan2.add("Pilih buku yang diinginkan, lalu di halaman detail buku tersedia tombol download");
+        List<String> pertanyaan3 = new ArrayList<>();
+        pertanyaan3.add("-");
+        List<String> pertanyaan4 = new ArrayList<>();
+        pertanyaan4.add("File hasil unduhan akan berbentuk PDF");
+        List<String> pertanyaan5 = new ArrayList<>();
+        pertanyaan5.add("File hasil unduhan yang berupa PDF bisa dibuka melalui aplikasi pembaca PDF");
+        List<String> pertanyaan6 = new ArrayList<>();
+        pertanyaan6.add("Login cukup dengan menggunakan Facebook saja");
+        List<String> pertanyaan7 = new ArrayList<>();
+        pertanyaan7.add("Profil pada aplikasi BSE tidak bisa diubah, karena menggunakan fitur login melalui facebook");
+
+
+
+
+        listHashMap.put(listDataFaq.get(0), pertanyaan1);
+        listHashMap.put(listDataFaq.get(1), pertanyaan2);
+        listHashMap.put(listDataFaq.get(2), pertanyaan3);
+        listHashMap.put(listDataFaq.get(3),pertanyaan4 );
+        listHashMap.put(listDataFaq.get(4), pertanyaan5);
+        listHashMap.put(listDataFaq.get(5), pertanyaan6);
+        listHashMap.put(listDataFaq.get(6), pertanyaan7);
+
     }
 
 }
