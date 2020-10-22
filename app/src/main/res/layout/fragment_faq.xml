@@ -10,7 +10,12 @@
     <ExpandableListView
         android:id="@+id/elv_faq"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </ExpandableListView>
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        tools:listitem="@layout/list_pertanyaan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ExpandableListView>
     
 </androidx.constraintlayout.widget.ConstraintLayout>
