@@ -6,7 +6,7 @@
 
     <TextView
         android:id="@+id/tv_listjawab"
-        android:textSize="16dip"
+        android:textSize="16sp"
         android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
