@@ -61,9 +61,9 @@ public class IntroActivity extends AppCompatActivity {
 
 
         final List<ScreenItem> mList = new ArrayList<>();
-        mList.add(new ScreenItem("Selamat Datang", "Nikmati Pengalaman Belajar Online", R.drawable.bse));
-        mList.add(new ScreenItem("Ribuan Konten Gratis", "Nikmati Pengalaman Belajar Online", R.drawable.bse));
-        mList.add(new ScreenItem("Belajar Berbagi", "Nikmati Pengalaman Belajar Online", R.drawable.bse));
+        mList.add(new ScreenItem("Selamat Datang", "Nikmati Pengalaman Belajar Online", R.drawable.boy));
+        mList.add(new ScreenItem("Ribuan Konten Gratis", "Nikmati Pengalaman Belajar Online", R.drawable.online));
+        mList.add(new ScreenItem("Belajar Berbagi", "Nikmati Pengalaman Belajar Online", R.drawable.online));
 
         screenPager = findViewById(R.id.screen_viewpager);
         introViewPagerAdapter = new IntroViewPagerAdapter(this, mList);
