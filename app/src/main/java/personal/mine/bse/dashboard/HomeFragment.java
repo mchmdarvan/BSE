@@ -40,12 +40,21 @@ import personal.mine.bse.Adapter.BookAdapter;
 import personal.mine.bse.DetailBukuActivity;
 import personal.mine.bse.Model.Book;
 import personal.mine.bse.R;
+import personal.mine.bse.modul.BukuBaruActivity;
+import personal.mine.bse.modul.BukuNonkurikulumActivity;
+import personal.mine.bse.modul.BukuPopulerActivity;
+import personal.mine.bse.modul.PaudActivity;
+import personal.mine.bse.modul.SdActivity;
+import personal.mine.bse.modul.SmaActivity;
+import personal.mine.bse.modul.SmkActivity;
+import personal.mine.bse.modul.SmpActivity;
 import personal.mine.bse.utils.Config;
 
 import static com.facebook.FacebookSdk.getApplicationContext;
 
 public class HomeFragment extends Fragment {
 
+    TextView tvPAUD, tvSD, tvSMP, tvSMK, tvSMA, tvTerbaru, tvTerpopuler, tvNonkurikulum;
     BookAdapter bookAdapter;
     List<Book> bookList;
     SharedPreferences sharedPreferences;
@@ -65,6 +74,14 @@ public class HomeFragment extends Fragment {
         sharedPreferences = getActivity().getSharedPreferences("login", Context.MODE_PRIVATE);
         Log.d("Response: ", "OnResponse: " + this.getActivity().getSharedPreferences("login", Context.MODE_PRIVATE).getString("token", ""));
 
+        tvPAUD = view.findViewById(R.id.tvPAUD);
+        tvSD = view.findViewById(R.id.tvSD);
+        tvSMP = view.findViewById(R.id.tvSMP);
+        tvSMA = view.findViewById(R.id.tvSMA);
+        tvSMK = view.findViewById(R.id.tvSMK);
+        tvNonkurikulum = view.findViewById(R.id.tvNonkurikulum);
+        tvTerbaru = view.findViewById(R.id.tvTerbaru);
+        tvTerpopuler = view.findViewById(R.id.tvTerpopuler);
         rvBukuTerbaru = view.findViewById(R.id.rvBukuTerbaru);
         rvBukuNonKurikulum = view.findViewById(R.id.rvBukuNonkurikulum);
         rvBukuTerpopuler = view.findViewById(R.id.rvBukuTerpopuler);
@@ -78,6 +95,70 @@ public class HomeFragment extends Fragment {
         slideModelLs.add(new SlideModel(R.drawable.banner, ScaleTypes.CENTER_INSIDE));
 
         imageSlider.setImageList(slideModelLs, ScaleTypes.FIT);
+
+        tvPAUD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent paud = new Intent(getActivity(), PaudActivity.class);
+                startActivity(paud);
+            }
+        });
+
+        tvSD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sd = new Intent(getActivity(), SdActivity.class);
+                startActivity(sd);
+            }
+        });
+
+        tvSMP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent paud = new Intent(getActivity(), SmpActivity.class);
+                startActivity(paud);
+            }
+        });
+
+        tvSMK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent paud = new Intent(getActivity(), SmkActivity.class);
+                startActivity(paud);
+            }
+        });
+
+        tvSMA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent paud = new Intent(getActivity(), SmaActivity.class);
+                startActivity(paud);
+            }
+        });
+
+        tvTerpopuler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent paud = new Intent(getActivity(), BukuPopulerActivity.class);
+                startActivity(paud);
+            }
+        });
+
+        tvTerbaru.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent paud = new Intent(getActivity(), BukuBaruActivity.class);
+                startActivity(paud);
+            }
+        });
+
+        tvNonkurikulum.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent paud = new Intent(getActivity(), BukuNonkurikulumActivity.class);
+                startActivity(paud);
+            }
+        });
 
         getBukuTerbaru();
         getBukuNonKurikulum();
@@ -110,14 +191,14 @@ public class HomeFragment extends Fragment {
                         rvBukuTerbaru.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
                         bookAdapter = new BookAdapter(bookList);
                         rvBukuTerbaru.setAdapter(bookAdapter);
-//                        bookAdapter.setOnItemClickCallback(new BookAdapter.OnItemClickCallback() {
-//                            @Override
-//                            public void OnItemClick(Book data) {
-//                                Intent move = new Intent(getActivity(), DetailBukuActivity.class);
-//                                move.putExtra("Id", data.getId());
-//                                startActivity(move);
-//                            }
-//                        });
+                        bookAdapter.setOnItemClickCallback(new BookAdapter.OnItemClickCallback() {
+                            @Override
+                            public void OnItemClick(Book data) {
+                                Intent move = new Intent(getContext(), DetailBukuActivity.class);
+                                move.putExtra("Id", data.getId());
+                                startActivity(move);
+                            }
+                        });
                     }
                 }, new Response.ErrorListener() {
             @Override
@@ -169,14 +250,14 @@ public class HomeFragment extends Fragment {
                         rvBukuTerpopuler.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
                         bookAdapter = new BookAdapter(bookList);
                         rvBukuTerpopuler.setAdapter(bookAdapter);
-//                        bookAdapter.setOnItemClickCallback(new BookAdapter.OnItemClickCallback() {
-//                            @Override
-//                            public void OnItemClick(Book data) {
-//                                Intent move = new Intent(getActivity(), DetailBukuActivity.class);
-//                                move.putExtra("Id", data.getId());
-//                                startActivity(move);
-//                            }
-//                        });
+                        bookAdapter.setOnItemClickCallback(new BookAdapter.OnItemClickCallback() {
+                            @Override
+                            public void OnItemClick(Book data) {
+                                Intent move = new Intent(getContext(), DetailBukuActivity.class);
+                                move.putExtra("Id", data.getId());
+                                startActivity(move);
+                            }
+                        });
                     }
                 }, new Response.ErrorListener() {
             @Override
@@ -228,14 +309,14 @@ public class HomeFragment extends Fragment {
                         rvBukuNonKurikulum.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
                         bookAdapter = new BookAdapter(bookList);
                         rvBukuNonKurikulum.setAdapter(bookAdapter);
-//                        bookAdapter.setOnItemClickCallback(new BookAdapter.OnItemClickCallback() {
-//                            @Override
-//                            public void OnItemClick(Book data) {
-//                                Intent move = new Intent(getActivity(), DetailBukuActivity.class);
-//                                move.putExtra("Id", data.getId());
-//                                startActivity(move);
-//                            }
-//                        });
+                        bookAdapter.setOnItemClickCallback(new BookAdapter.OnItemClickCallback() {
+                            @Override
+                            public void OnItemClick(Book data) {
+                                Intent move = new Intent(getContext(), DetailBukuActivity.class);
+                                move.putExtra("Id", data.getId());
+                                startActivity(move);
+                            }
+                        });
                     }
                 }, new Response.ErrorListener() {
             @Override

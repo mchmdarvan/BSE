@@ -118,6 +118,7 @@
             app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
         <TextView
+            android:id="@+id/tvTerbaru"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawablePadding="4dp"
@@ -154,6 +155,7 @@
             app:layout_constraintTop_toBottomOf="@+id/cvBukuTerbaru" />
 
         <TextView
+            android:id="@+id/tvTerpopuler"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -190,6 +192,7 @@
             app:layout_constraintTop_toBottomOf="@+id/cvBukuTerpopuler" />
 
         <TextView
+            android:id="@+id/tvNonkurikulum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"

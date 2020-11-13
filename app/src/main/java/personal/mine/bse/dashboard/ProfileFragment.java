@@ -142,7 +142,7 @@ public class ProfileFragment extends Fragment {
                     RequestOptions requestOptions = new RequestOptions();
                     requestOptions.dontAnimate();
 
-                    Glide.with(getActivity())
+                    Glide.with(getContext())
                             .load(pic)
                             .into(imgProfile);
 
