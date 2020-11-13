@@ -4,15 +4,19 @@ public class Book {
     private String id;
     private String title;
     private String description;
+    private String writer;
+    private String url;
 
     public Book(){
 
     }
 
-    public Book(String id, String title, String description) {
+    public Book(String id, String title, String description, String writer, String url) {
         this.id = id;
         this.title = title;
         this.description = description;
+        this.writer = writer;
+        this.url = url;
     }
 
     public String getId() {
@@ -37,5 +41,21 @@ public class Book {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getWriter() {
+        return writer;
+    }
+
+    public void setWriter(String writer) {
+        this.writer = writer;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }
