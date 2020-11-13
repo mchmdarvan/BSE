@@ -31,5 +31,13 @@
     <string name="tvJudul">Judul</string>
     <string name="tvDeskripsi">Deskripsi</string>
     <string name="penulis">Penulis</string>
+    <string name="buku_paket_a">Buku Paket A</string>
+    <string name="buku_paket_b">Buku Paket B</string>
+    <string name="buku_paket_c">Buku Paket C</string>
+    <string name="buku_smp">Buku SMP</string>
+    <string name="buku_paud">Buku PAUD</string>
+    <string name="buku_sd">Buku SD</string>
+    <string name="buku_sma">Buku SMA</string>
+    <string name="buku_smk">Buku SMK</string>
 
 </resources>

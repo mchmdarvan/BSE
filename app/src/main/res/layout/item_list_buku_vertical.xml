@@ -21,20 +21,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/tvJudul"
+        android:textColor="@color/colorBlack"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/ivBookCover"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvBookWriter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/penulis"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/ivBookCover"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitleBook" />
 
     <TextView
         android:id="@+id/tvBookDescription"
@@ -42,9 +32,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:textColor="@color/colorBlack"
         android:maxLines="3"
         android:text="@string/tvDeskripsi"
         app:layout_constraintStart_toEndOf="@+id/ivBookCover"
-        app:layout_constraintTop_toBottomOf="@+id/tvBookWriter" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleBook" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

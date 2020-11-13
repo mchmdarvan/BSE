@@ -111,17 +111,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.subitem_buku_SMK:
                 Intent bukuSMk = new Intent(MainActivity.this, SmkActivity.class);
                 startActivity(bukuSMk);
-
+                break;
             case R.id.subitem_buku_paket_a:
                 Intent paketA = new Intent(MainActivity.this, PaketAActivity.class);
                 startActivity(paketA);
+                break;
             case R.id.subitem_buku_paket_b:
                 Intent paketB = new Intent(MainActivity.this, PaketBActivity.class);
                 startActivity(paketB);
+                break;
             case R.id.subitem_buku_paket_c:
                 Intent paketC = new Intent(MainActivity.this, PaketCActivity.class);
                 startActivity(paketC);
-
+                break;
         }
         return true;
     }
