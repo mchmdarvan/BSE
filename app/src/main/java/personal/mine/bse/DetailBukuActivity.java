@@ -48,9 +48,9 @@ public class DetailBukuActivity extends AppCompatActivity {
         ivRead = findViewById(R.id.ivRead);
         ivDownload = findViewById(R.id.ivDownload);
 
-        Glide.with(this)
-                .load(R.drawable.banner)
-                .into(ivCover);
+//        Glide.with(this)
+//                .load(R.drawable.banner)
+//                .into(ivCover);
 
         Log.e("Test", getIntent().getExtras().getString("Id"));
 
@@ -77,7 +77,11 @@ public class DetailBukuActivity extends AppCompatActivity {
                                 tvTitle.setText(item.getString("Title"));
                                 tvDescription.setText(item.getString("Description"));
                                 tvWriter.setText(item.getString("Writer"));
+                                final String coverUrl = item.getString("Cover");
                                 final String url = item.getString("Attachment");
+                                Glide.with(getApplicationContext())
+                                        .load(coverUrl)
+                                        .into(ivCover);
                                 ivRead.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
